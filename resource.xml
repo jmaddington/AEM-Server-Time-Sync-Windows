@@ -1,0 +1,25 @@
+<component info='CentraStage Component'>
+  <general>
+    <name>Server Time Sync [Windows]</name>
+    <category>scripts</category>
+    <description>Sets a server to sync from NTP, and requests a resync right away.</description>
+    <uid>263347dc-5f48-4f99-ae5a-24ec82e9d4e0</uid>
+    <hash />
+    <version>7</version>
+    <timeout>3600</timeout>
+    <securityLevel>5</securityLevel>
+    <installType>powershell</installType>
+  </general>
+  <postCondition idx='0'>
+    <consequence>warn</consequence>
+    <resource>stderr</resource>
+    <text>did not resync</text>
+    <qualifier>found</qualifier>
+  </postCondition>
+  <postCondition idx='1'>
+    <consequence>warn</consequence>
+    <resource>stdout</resource>
+    <text>failed</text>
+    <qualifier>found</qualifier>
+  </postCondition>
+</component>
